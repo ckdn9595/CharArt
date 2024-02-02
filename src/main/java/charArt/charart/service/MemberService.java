@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+
 public class MemberService {
     private final MemberRepository _repo;
 
@@ -18,12 +18,12 @@ public class MemberService {
 
     public long join (Member member){
         checkExist(member);
-        _repo.Save(member);
+        _repo.save(member);
         return member.getId();
     }
 
     public List<Member> findMembers(){
-        return _repo.findALl();
+        return _repo.findAll();
     }
 
     public Optional<Member> find(long memberId){

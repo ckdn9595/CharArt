@@ -1,6 +1,12 @@
 package charArt.charart.domain;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name ="Member")
 public class Member {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 

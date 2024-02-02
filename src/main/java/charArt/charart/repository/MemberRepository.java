@@ -7,10 +7,10 @@ import java.util.Optional;
 
 
 public interface MemberRepository {
-    Member Save(Member memeber);
+    Member save(Member memeber);
     Optional<Member> findById(long id);
 
     Optional<Member> findByName(String name);
 
-    List<Member> findALl();
+    List<Member> findAll();
 }
